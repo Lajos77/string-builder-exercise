@@ -1,17 +1,19 @@
 public class StringBuilderExercise {
 
 	public static void main(String[] args) {
-		
-		String sequence = "";
-		
+
+		StringBuilder sb = new StringBuilder();
+
 		for (int i = 0; i < 10; i++) {
 			if (i % 2 == 0) {
-				sequence = sequence + i;
+				sb.append(i);
 			} else {
-				sequence = i + sequence;
+				sb.insert(0, i);
 			}
+
 		}
-		System.out.println(sequence);
+		System.out.println(sb);
+
 	}
 
 }
